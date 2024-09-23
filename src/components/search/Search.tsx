@@ -2,7 +2,7 @@ import { useContext, useState } from "react";
 import { DataContext, dataType } from "../../context/DataContext";
 
 const getData = async (cep: string, setData: dataType) => {
-    const response = await fetch(`http://viacep.com.br/ws/${cep}/json/`);
+    const response = await fetch(`https://viacep.com.br/ws/${cep}/json/`);
     const data = await response.json();
     setData(data);
 }
