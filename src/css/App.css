@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
+:root {
+    --highlight: #24307D;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "inria sans", sans-serif;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    min-height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem;
+    background: var(--highlight);
+}
+
+.panel {
+    display: flex;
+    flex-direction: column;
+    padding: 0.5rem;
+    row-gap: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+    color: var(--highlight);
+    background: white;
+}
+
+.panel h1 {
+    text-align: center;
+}
+
+.panel button {
+    padding: 0 1rem;
+    font-weight: bold;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    background: var(--highlight);
+    color: white;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.panel button:disabled {
+    background: #aaa;
+    cursor: default;
+}
+
+.panel :where(input, button) {
+    height: 3rem;
+    border: none;
+}
+
+.search {
+    display: flex;
+    column-gap: 0.5rem;
+}
+
+.search input {
+    width: 100%;
+    padding-left: 1rem;
+    font-size: 1.2rem;
+    border-bottom: 1px solid #aaa;
+    outline: none;
+}
+
+.search input::placeholder {
+    color: #ccc;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    font-size: 0.9rem;
+    row-gap: .25rem;
+}
+
+.info .entries {
+    display: flex;
+    justify-content: space-between;
+}
+
+.info .key {
+    width: 5.5rem;
+    text-transform: capitalize;
+    font-weight: bold;
+}
